@@ -1,0 +1,9 @@
+flask
+flask-cors
+streamlit
+beautifulsoup4
+gtts
+requests
+nltk
+textblob
+googletrans==4.0.0-rc1
