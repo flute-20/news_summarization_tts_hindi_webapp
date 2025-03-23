@@ -26,7 +26,11 @@ def fetch_news(company_name):
         sentiment = analyze_sentiment(summary)
         topics = extraction_topic(summary)
 
-        articles.append({'Title' : title , 'Summary' : summary , 'Sentiment' : sentiment , 'Topics' : topics})
+        articles.append({'Title' : title , 
+                         'Summary' : summary , 
+                         'Sentiment' : sentiment , 
+                         'Topics' : topics
+                        })
 
     return {"Company" : company_name , "Articles" : articles}
 
