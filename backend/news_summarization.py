@@ -21,18 +21,17 @@ def fetch_news(company_name):
 
     articles = []
     for item in soup.find_all('div' , class_ = 'ssrcss-tq7xfh-PromoContent exn3ah913')[ :10] :
-        title = item.find('p', class_='ssrcss-1b1mki6-PromoHeadline exn3ah910').text.strip() if item.find('p') else "no title"
-        title = title.split('.')[0]  # Clean extra text
+        title = item.find('p', class_='ssrcss-1b1mki6-PromoHeadline exn3ah910').text if item.find('p') else "no title"
         summary = item.find('p' , class_ = 'ssrcss-1q0x1qg-Paragraph e1jhz7w10').text if item.find('p') else ''
         sentiment = analyze_sentiment(summary)
         topics = extraction_topic(summary)
 
-        articles.append({'Title' : title , 
-                         'Summary' : summary , 
-                         'Sentiment' : sentiment , 
-                         'Topics' : topics
-                        })
-
+        OrderedDict([
+            ('Title', title),
+            ('Summary', summary),
+            ('Sentiment', sentiment),
+            ('Topics', topics)
+        ])
     return {"Company" : company_name , "Articles" : articles}
 
 def analyze_sentiment(text):
