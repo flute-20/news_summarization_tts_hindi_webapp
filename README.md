@@ -36,6 +36,17 @@ To get this app running on your machine, follow these steps:
    - Then launch the Streamlit frontend:
      streamlit run app.py
 
+## Project Overview
+This web-based application extracts news articles for a given company, performs sentiment analysis, conducts comparative analysis, and generates a Hindi text-to-speech (TTS) output. Users can input a company name and receive a structured sentiment report along with playable Hindi audio.
+
+### Features
+- **News Extraction**: Scrapes news articles from BBC using BeautifulSoup.
+- **Sentiment Analysis**: Analyzes sentiment (Positive, Negative, Neutral) using TextBlob.
+- **Comparative Analysis**: Compares sentiment and topics across articles.
+- **Hindi TTS**: Converts the final sentiment analysis to Hindi audio using gTTS.
+- **Web Interface**: Built with Streamlit for user interaction.
+- **API**: Backend API developed with Flask for frontend-backend communication.
+
 Usage:
 1. Open the app in your browser (Streamlit usually runs at http://localhost:8501).
 2. Type a company name (e.g., "Tesla") in the text box.
