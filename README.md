@@ -89,6 +89,10 @@ Deployment:
   1. Push this repo to GitHub into Frontend directory
   2. Create a Space on Hugging Face, link your GitHub repo, and select Streamlit as the framework.
   3. Wait for the build—done!
+ 
+  ## Dependencies
+- Backend: Flask, BeautifulSoup, NLTK, TextBlob (see `backend/requirements.txt`).
+- Frontend: Streamlit, requests, gTTS, deep-translator (see `frontend/requirements.txt`).
 
 Video Demo:
 - Check out the demo here: [Insert YouTube/Google Drive link after recording].
