@@ -3,6 +3,7 @@ from flask import Flask , request , jsonify
 from news_summarization import fetch_news , comparative_analysis
 from flask_cors import CORS
 import os 
+import json
 
 app = Flask(__name__)
 CORS(app) #enable cors for frontend
@@ -17,7 +18,11 @@ def get_news():
         company = request.args.get("company", "Tesla")  # Default to "Tesla" if no company name is provided
         news_data = fetch_news(company)
         summary_report = comparative_analysis(news_data)
-        return jsonify(summary_report)
+        return app.response_class(
+            response=json.dumps(summary_report , sort_keys = False),
+            status = 200 ,
+            mimetype = 'application/json'
+        )
     except Exception as e :
         return jsonify({"error" : str(e)}) , 500
     
