@@ -95,5 +95,21 @@ Deployment:
 - Frontend: Streamlit, requests, gTTS, deep-translator (see `frontend/requirements.txt`).
 
 Video Demo:
-- Check out the demo here: [Insert YouTube/Google Drive link after recording].
-- It’s a quick 2-3 minute walkthrough showing how to use the app and what it spits out!
+- Check out the demo here: Assignment: News Summarization and Text-to-Speech Application
+
+GitHub links : https://github.com/flute-20/news_summarization_tts_hindi_webapp
+
+deployment links: (frontend in hugging face , backend in render 
+
+	frontend : https://huggingface.co/spaces/vijayasris/news-sentiment-analyzer
+	
+	backend : https://news-summarization-tts-hindi-webapp.onrender.com
+
+server running : 
+
+	uptimerobot : https://dashboard.uptimerobot.com/monitors?ref=website-header
+
+youtube link : 
+	
+	youtube link : https://youtu.be/pb4Ybxnmhzc
+- It’s a quick 6-7 minute walkthrough showing how to use the app and what it spits out!
