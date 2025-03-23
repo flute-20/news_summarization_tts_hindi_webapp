@@ -62,10 +62,20 @@ Assumptions & Limitations:
   - Sentiment analysis might not catch sarcasm or complex tones.
 
 Deployment:
-- Deployed on Hugging Face Spaces:
-  - Link: https://<your-username>-news-summarizer.hf.space (replace with your actual link after deploying).
+- Backend Deployed on render:
+     - created flask and python files
+     - pushed to this repo into backend directory
+     - Then deployed the backend flask on render
+     - used that link for connecting to front end
+- Middle ware
+     - As render automatically shutdowns the server
+     - i have used uptimerobot
+     - This will make the frontend to get a request
+     - so that backend responds fastly even it gets shutdown
+- Frontend Deployed on Hugging Face Spaces:
+  - Link:   https://huggingface.co/spaces/vijayasris/news-sentiment-analyzer
 - Steps to deploy:
-  1. Push this repo to GitHub.
+  1. Push this repo to GitHub into Frontend directory
   2. Create a Space on Hugging Face, link your GitHub repo, and select Streamlit as the framework.
   3. Wait for the build—done!
 
