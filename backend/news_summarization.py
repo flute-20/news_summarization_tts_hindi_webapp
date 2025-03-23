@@ -26,12 +26,12 @@ def fetch_news(company_name):
         sentiment = analyze_sentiment(summary)
         topics = extraction_topic(summary)
 
-        OrderedDict([
+        articles.append(OrderedDict([
             ('Title', title),
             ('Summary', summary),
             ('Sentiment', sentiment),
             ('Topics', topics)
-        ])
+        ]))
     return {"Company" : company_name , "Articles" : articles}
 
 def analyze_sentiment(text):
